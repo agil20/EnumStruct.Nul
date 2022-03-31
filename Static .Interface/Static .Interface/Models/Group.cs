@@ -62,31 +62,18 @@ Group class
 
 
         }
-        /*
-         - AddStudent() - parametr olaraq Student obyekti qəbul edir və gələn student obyektini Group class-ında olan 
-        Students arrayinə əlavə edir əgər arrayin uzuluğu StudentLimit-i keçirsə əlavə etməməlidi.*/
-        public Student[] AddStudent(string fullname,int id,int point)
-        { Fullname= fullname;
-            Point= point;
+        int a = 0;
+        public void AddStudent(Student student)
+        {
+            Students[a] = student;
 
-              for (int i = 0; i < StudentLimit; i++)
-            {
-                Students[i] = new Student(Fullname, Point, Id);
-              
-            } 
-              return Students;
+            a++;
+            
 
 
         }
-        //public Nullable GetStudent(int id)
-        //{
-        //     id=Students[id].Id;
-        //    return 
 
-        //}
-        ///*- GetStudent() - parametr olaraq nullable int tipindən bir id dəyəri alacaq və 
-         //* həmin id-li Student obyektini tapıb geriyə qaytaracaq.*/
+
     }
-
-}
+}}
 

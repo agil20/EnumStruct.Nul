@@ -2,7 +2,7 @@
 
 namespace Static_.Interface.Models
 {
-    internal class Group : Student
+    class Group 
     { /* 
 Group class
 - GroupNo
@@ -10,12 +10,14 @@ Group class
 - Students - Student tipindən bir array-dir özündə student obyektləri saxlayacaq və private olacaq.
 - CheckGroupNo() - parametr olaraq string bir groupNo dəyəri alır və qrupun nömrəsini yoxlayır geriyə true/false dəyərləri qaytarır. 
        */
+        public Group()
+        {
+
+        }
         public string GroupNo { get; set; }
 
 
-        public Group(string fullname, int point, string email, string password) : base(fullname, point, email, password)
-        {
-        }
+       
         private int _studentLimit;
         public int StudentLimit
         {
@@ -68,12 +70,46 @@ Group class
             Students[a] = student;
 
             a++;
-            
 
+
+
+        } /*- GetStudent() - 
+           * parametr olaraq nullable int tipindən bir id dəyəri alacaq və həmin id-li
+    Student obyektini tapıb geriyə qaytaracaq.*/
+        public bool GetStudent(int? id)
+        { bool result=false;
+            if (id == null)
+            {
+                Console.WriteLine("bele bir Id yoxdur");
+            }
+            else
+            {
+                foreach (var item in Students)
+                {
+                    if (id==item.Id)
+                    {
+                        result = true;
+                    }
+
+                }
+            }
+            return result;
+        }
+        /*- GetAllStudents() - geriyə Student arrayi qaytaracaq.*/
+        public void GetAllStudents()
+        {
+            foreach (var item in Students)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        /*ps: GroupNo və StudentLimit dəyərləri olmadan Group Obyekti yaratmaq olmaz.*/
+        public Group(string groupno,int studentlimit)
+        { GroupNo=groupno;
+            StudentLimit=studentlimit;
 
         }
 
-
     }
-}}
+}
 

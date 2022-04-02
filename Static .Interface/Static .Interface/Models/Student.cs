@@ -2,16 +2,26 @@
 
 namespace Static_.Interface.Models
 {
-    public class Student : User
-    {    //eyni propertiler lazim olduguna gore miras aliram..
-        public Student(string fullname,int point,int Id)
-        {Fullname = fullname;
+    public class Student
+    {
+        public string Fullname { get; set; }
+
+        private static int _id;
+        public int Id
+        {
+            get { return _id; }
+            private set { _id = 1; }
+        }
+              public int Point { get; set; }
+        public Student(string fullname, int point)
+        {
+            Fullname = fullname;
             Point = point;
 
         }
 
-        public int Point { get; set; }
-      
+
+
 
         public void StudentIfo()
         {
@@ -19,11 +29,8 @@ namespace Static_.Interface.Models
                 $"Fullname: {Fullname}\n" +
                 $"Point: {Point}");
         }
-        //public Student()
-        //{
 
-        //}
-   
+
     }
 
 }

@@ -4,6 +4,10 @@ namespace Static_.Interface.Models
 {
     public class Student
     {
+        public Student()
+        {
+
+        }
         public string Fullname { get; set; }
 
         private static int _id;

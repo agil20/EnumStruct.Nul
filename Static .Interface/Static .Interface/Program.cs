@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Static_.Interface.Models;
+using System;
 using System.Text.RegularExpressions;
 
 namespace Static_.Interface
@@ -14,7 +15,9 @@ namespace Static_.Interface
         2. Create new group
             
 */
-            User user = new User(); 
+          User user = new User();
+            Group group = new Group();
+           
             Console.WriteLine("Zehmet omasa Fullname daxil edin");
             user.Fullname =Console.ReadLine();
             Console.WriteLine("Zehmet omasa Email daxil edin");
@@ -40,8 +43,45 @@ namespace Static_.Interface
 
                     /*2 göndərildiyi halda console-dan group-un bütün məlumatları göndərilməli və yeni bir qrup
                      * obyekti yaradılmalıdır.*/
-                
 
+                    Student student = new Student();
+                    Console.WriteLine("zehmet olmasa adi daxil edin");
+
+                    student.Fullname =Console.ReadLine();
+                    Console.WriteLine("zehmet olmasa bali daxil et");
+                    student.Point=Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("zehmet olmasa grup noresin daxil edin");
+                    group.GroupNo =Console.ReadLine();
+                    /* Bir Menu gəlməlidi və menu-da aşağıdakı əməliyyatlar olmalıdı:
+        1. Show all students
+        2. Get student by id
+        3. Add student
+        0. Quit*/
+                    Console.WriteLine("1.Show all students\n" +
+                           "2.Get student by id\n" +
+                           "3.Add Student\n" +
+                           "0.Quit");
+                    int s=Convert.ToInt32(Console.ReadLine());  
+                    do
+                    {
+                        if (s==1)
+                        {
+                            student.StudentIfo();
+
+                        }
+                        if (s==2)
+                        { int idd= Convert.ToInt32(Console.ReadLine());
+                            group.GetStudent(idd);
+                        }
+                        //if (s==3)
+                        //{
+                        //    group.AddStudent()
+
+                        //}
+
+
+
+                    } while (s> 3&& s<0);  
 
 
 

@@ -56,10 +56,19 @@ namespace Static_.Interface
             bool result3 = false;// -şifrədə ən az 1 rəqəm olmalıdır
             for (int i = 0; i < password.Length; i++)
             {
-                result1 = char.IsUpper(password[i]);
-                result2 = char.IsLower(password[i]);
-                result3 = char.IsNumber(password[i]);
+                if (char.IsUpper(password[i]))
+                { result1=true;
 
+                }
+                if (char.IsLower(password[i]))
+                { result2=true;
+
+                }
+                if (char.IsNumber(password[i]))
+                {
+                result3=true;
+                }
+              
 
             }
             if (password.Length >= 8 && result1 == true && result2 == true && result3 == true)

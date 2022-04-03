@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11112\\Static .Interface\\Static .Interface\\Static .Interface.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11122\\Static .Interface\\Static .Interface\\Static .Interface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11112\\Static .Interface\\Static .Interface\\Static .Interface.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11122\\Static .Interface\\Static .Interface\\Static .Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11112\\Static .Interface\\Static .Interface\\Static .Interface.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11122\\Static .Interface\\Static .Interface\\Static .Interface.csproj",
         "projectName": "Static .Interface",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11112\\Static .Interface\\Static .Interface\\Static .Interface.csproj",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11122\\Static .Interface\\Static .Interface\\Static .Interface.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11112\\Static .Interface\\Static .Interface\\obj\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\EnumStruct.Nul11122\\Static .Interface\\Static .Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

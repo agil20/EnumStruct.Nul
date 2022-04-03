@@ -46,6 +46,7 @@ namespace Static_.Interface
                      * obyekti yaradılmalıdır.*/
 
 
+
                     /* Bir Menu gəlməlidi və menu-da aşağıdakı əməliyyatlar olmalıdı:
         1. Show all students
         2. Get student by id

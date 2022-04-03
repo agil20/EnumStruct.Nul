@@ -12,10 +12,7 @@ Group class
 - CheckGroupNo() - parametr olaraq string bir groupNo dəyəri alır və qrupun nömrəsini yoxlayır geriyə true/false dəyərləri qaytarır. 
        */
 
-    public Group()
-    {
-
-    }
+   
     private string _groupNo;
     public string GroupNo
     {

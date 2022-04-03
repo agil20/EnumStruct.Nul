@@ -4,10 +4,7 @@ namespace Static_.Interface
 {
    public class User : IAccount
     {
-        public User()
-        {
-
-        }
+        
         private  static int _id;
         private  string _password;
         public  int Id
@@ -75,7 +72,7 @@ namespace Static_.Interface
 
         public void ShowIfo()
         {
-            Console.WriteLine($"ID: {Id}\n" +
+            Console.WriteLine($"ID: {_id}\n" +
      $"Fullname: {Fullname}\n" +
      $"Email: {Email}"); ;
         }

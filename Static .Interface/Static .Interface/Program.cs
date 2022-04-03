@@ -15,17 +15,18 @@ namespace Static_.Interface
         2. Create new group
             
 */
-          User user = new User();
-            Group group = new Group();
-           
             Console.WriteLine("Zehmet omasa Fullname daxil edin");
-            user.Fullname =Console.ReadLine();
+          string  Fullname = Console.ReadLine();
+
             Console.WriteLine("Zehmet omasa Email daxil edin");
 
-            user.Email = Console.ReadLine();
+            string Email = Console.ReadLine();
             Console.WriteLine("Zehmet omasa Password daxil edin");
 
-            user.Password = Console.ReadLine();
+             string Password = Console.ReadLine();
+            User user = new User(Email,Password);
+            user.Fullname = Fullname;
+         
             Console.WriteLine("1.Show Info\n" +
                 "2.Create new group\n" +
                 "secin");
@@ -44,19 +45,17 @@ namespace Static_.Interface
                     /*2 göndərildiyi halda console-dan group-un bütün məlumatları göndərilməli və yeni bir qrup
                      * obyekti yaradılmalıdır.*/
 
-                    Student student = new Student();
-                    Console.WriteLine("zehmet olmasa adi daxil edin");
 
-                    student.Fullname =Console.ReadLine();
-                    Console.WriteLine("zehmet olmasa bali daxil et");
-                    student.Point=Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("zehmet olmasa grup noresin daxil edin");
-                    group.GroupNo =Console.ReadLine();
                     /* Bir Menu gəlməlidi və menu-da aşağıdakı əməliyyatlar olmalıdı:
         1. Show all students
         2. Get student by id
         3. Add student
         0. Quit*/
+                    Console.WriteLine("zehmet olmasa grup no daxil edin");
+                    string groupno = Console.ReadLine();
+                    Console.WriteLine("Zehmet olmasa limiti daaxil edin");
+                    int Stuentlimit = Convert.ToInt32(Console.ReadLine());
+                    Group group = new Group(groupno, Stuentlimit);
                     Console.WriteLine("1.Show all students\n" +
                            "2.Get student by id\n" +
                            "3.Add Student\n" +
@@ -66,18 +65,35 @@ namespace Static_.Interface
                     {
                         if (s==1)
                         {
+                          Student student=new Student();
                             student.StudentIfo();
 
                         }
                         if (s==2)
-                        { int idd= Convert.ToInt32(Console.ReadLine());
-                            group.GetStudent(idd);
-                        }
-                        //if (s==3)
-                        //{
-                        //    group.AddStudent()
 
-                        //}
+                        {  /*2 göndərilsə console-dan bir id istənməlidir və həmin id-li Student obyekti tapılıb onun
+                            * bütün məlumatları console-a yazdırılmalıdır*/
+                            Console.WriteLine("zehmet olmasa Id daxil edin");
+                            int idd=Convert.ToInt32(Console.ReadLine());
+                            group.GetStudent(idd);
+
+                        }
+                        if (s==3)
+                        {/* 3 göndərilsə console-dan Student-in bütün məlumatları istənib 
+                    * yeni bir Student yaranmalıdır, 0 göndərilərsə program sonlanmalıdır*/
+                            Student student = new Student();
+                            student.Fullname = Console.ReadLine();
+                            student.Point=Convert.ToInt32(Console.ReadLine());
+
+                            Group[] groups = new Group[0];
+                           groups[0].AddStudent(student);
+
+
+                        }
+                        if (s==0)
+                        {
+                            return;
+                        }
 
 
 

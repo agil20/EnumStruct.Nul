@@ -48,11 +48,15 @@ Group class
             }
             else
             {
-                Console.WriteLine("Qrupda ola biləcək tələbə sayını göstərir minumum 5 maximum 18 ola bilər.");
+                throw new ArgumentException();
             }
         }
     }
-    private Student[] Students = new Student[0];
+    private Student[] Students;
+    public Group()
+    {
+        Students = new Student[0];
+    }
     /*- CheckGroupNo() - parametr olaraq string bir groupNo dəyəri alır və qrupun nömrəsini yoxlayır geriyə
      * true/false dəyərləri qaytarır. */
     public bool CheckGroupNo(string groupNo)
@@ -78,12 +82,12 @@ Group class
 
 
     }
-    int a = 0;
+   
     public void AddStudent(Student student)
     {
-        Students[a] = student;
+        Array.Resize(ref Students, Students.Length + 1);  
+        Students[Students.Length-1] = student;
 
-        a++;
 
 
 

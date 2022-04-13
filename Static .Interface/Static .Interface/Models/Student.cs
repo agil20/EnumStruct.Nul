@@ -3,24 +3,21 @@
 namespace Static_.Interface.Models
 {
     public class Student
-    {
-        public Student()
+    {         public Student()
         {
-
+            _id++;
+            Id = _id;
         }
         public string Fullname { get; set; }
 
         private static int _id;
-        public int Id
-        {
-            get { return _id; }
-            private set { _id = 1; }
-        }
-              public int Point { get; set; }
+        public int Id { get; set; }
+        public int Point { get; set; }
         public Student(string fullname, int point)
         {
             Fullname = fullname;
             Point = point;
+           
 
         }
 
@@ -33,6 +30,7 @@ namespace Static_.Interface.Models
                 $"Fullname: {Fullname}\n" +
                 $"Point: {Point}");
         }
+        
 
 
     }
